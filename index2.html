@@ -7,8 +7,9 @@
     <title>TechDev Solutions</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
   </head>
-  <body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="10">
       <!-- navbar -->
         <nav class="navbar navbar-dark bg-primary navbar-fixed-top">
           <div class="container">
@@ -38,7 +39,7 @@
             <p class="lead">Fullstack web development solutions for the modern small business.</p>
 
             <div class="btn-group m-t-2" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary btn-lg">Register Now!</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register Now!</button>
                 <a class="btn btn-warning btn-lg" href="#speakers">See Speakers</a>
             </div>
           </div>
@@ -48,7 +49,7 @@
       <!-- about -->
       <div class="container">
 
-        <div class="row">
+        <div id="about" class="row">
           <div class="col-md-4 push-lg-4">
             <h3 class="display-4 m-t-3 m-b-3 text-xs-center">About TechDev</h3>
             <img class="img-fluid img-rounded hidden-xs-down" src="portland.jpg" alt="portland">
@@ -65,31 +66,97 @@
 
           <div class="col-md-4">
             <h3 class="display-4 m-t-3 m-b-3 text-xs-center">Our Proficiencies</h3>
-            <ul>
-              <li><strong>MongoDB</strong>: NoSQL database</li>
-              <li><strong>Angular</strong>: JavaScript framework</li>
-              <li><strong>Express</strong>: Framework for Node</li>
-              <li><strong>Node.js</strong>: JavaScript environment</li>
-              <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-              <li><strong>Babel</strong>: JavaScript compiler</li>
-            </ul>
+            <div class="list-group">
+              <a href="#" class="list-group-item"><strong>MongoDB</strong>: NoSQL database</a>
+              <a href="#" class="list-group-item"><strong>Angular</strong>: JavaScript framework </a>
+              <a href="#" class="list-group-item"><strong>Express</strong>: Framework for Node</a>
+              <a href="#" class="list-group-item"><strong>Node.js</strong>: JavaScript environment</a>
+              <a href="#" class="list-group-item"><strong>ES2015</strong>: Latest version of JavaScript</a>
+              <a href="#" class="list-group-item"><strong>Babel</strong>: JavaScript compiler</a>
+            </div>
           </div>
 
         </div> <!-- /about -->
 
         <!-- Speakers -->
-        <h2 id="#speakers" class="text-xs-center text-muted">Speakers</h2>
-        [speaker bios go here]
+        <h2 id="speakers" class="text-xs-center text-muted">Speakers</h2>
+          <div class="container container-fluid">
+          <div class="card-group">
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top img-fluid" src="dhh.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">DHH</h4>
+                <p class="card-text">Rails inventor.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top img-fluid" src="jasonf.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Jason Fried</h4>
+                <p class="card-text">37Signals CEO.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top-img-fluid" src="billgates.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Bill Gates</h4>
+                <p class="card-text">Windows creator.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top img-fluid" src="stevew.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Steve Wozniak</h4>
+                <p class="card-text">Windows co-founder.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top img-fluid" src="stevejobs.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Steve Jobs</h4>
+                <p class="card-text">Apple creator.</p>
+              </div>
+            </div>
+            <div class="card col-md-6 col-lg-4">
+              <img class="card-img-top img-fluid" src="linust.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Linus Torvaldt</h4>
+                <p class="card-text">Linux inventor.</p>
+              </div>
+            </div>
+          </div>
+          </div>
         <!-- /Speakers -->
 
         <!-- schedules -->
-        <h2 class="text-xs-center text-muted">Schedule</h2>
-        [conference schedule goes here]
+        <h2 id="schedules" class="text-xs-center text-muted">Schedule</h2>
+          <ul class="list-group">
+
+            <li class="list-group-item">
+            <h4 class="list-group-item-heading">Keynote: Internet of things <span class="tag tag-info tag-pill pull-xs-right">9:00A.M.</span></h4>
+              Presented by: David Heinemeir Hanson
+            </li>
+
+            <li class="list-group-item">
+            <h4 class="list-group-item-heading">Angular Basics <span class="tag tag-info tag-pill pull-xs-right">11:30A.M.</span></h4>
+              Presented by: Jason Fried
+            </li>
+
+            <li class="list-group-item">
+            <h4 class="list-group-item-heading">Intro To Ruby on Rails<span class="tag tag-info tag-pill pull-xs-right">11:30A.M.</span></h4>
+            Presented by: Steve Wozniak
+            </li>
+
+            <li class="list-group-item list-group-item-success">
+            <h4 class="list-group-item-heading">Lunch Break!<span class="tag tag-info tag-pill pull-xs-right">12.00P.M.</span></h4>
+            Free sandwiches, chips and soda! Dig in!
+            </li>
+          </ul>
         <!-- /schedules -->
 
         
         <!-- Callout button -->
-          <button type="button" class="btn btn-outline-primary btn-lg d-block m-x-auto m-y-3">Register Now!</button>
+          <button type="button" class="btn btn-outline-primary btn-lg d-block m-x-auto m-y-3" data-toggle="modal" data-target="#register">Register Now!</button>
         <!-- /Callout button -->
 
         <!-- signup form -->
@@ -146,6 +213,141 @@
               </div>
           </div>
         <!-- /footer -->
+
+        <!-- modal -->
+
+          <div id="register" class="modal fade">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-primary">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title">Register for our newsletter</h4>
+                </div>
+                <div class="modal-body">
+                  <!-- Registration form -->
+                  <h5 class="m-b-2">Basic Info</h5>
+
+                  <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Hurry!</strong> Early bird registration begins in 2 days.
+                  </div>
+                    <form>
+                      <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Timothy Johnson">
+                      </div>
+                      <div class="form-group has-danger">
+                        <label for="mail" class="form-control-label">email:</label>
+                        <input type="email" class="form-control form-control-danger" id="mail" placeholder="tjohnson@gmail.com">
+                      </div>
+                      <div class="form-group">
+                      <label for="role">Job Role:</label>
+                      <select class="c-select form_control" id="role" name="user_role">
+                        <option value="full stack js developer">Full Stack JavaScript Developer</option>
+                        <option value="front end developer">Front End Developer</option>
+                        <option value="back end developer">Back End Developer</option>
+                        <option value="designer">Designer</option>          
+                        <option value="student">Student</option> 
+                      </select>
+                      </div>
+
+                      <hr class="m-y-2">
+                      <h5 class="m-b-2">Which topics interest you most?</h5>
+                      <div class="form-group custom-controls-stacked">
+                        <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Javascript frameworks</span>
+                        </label>
+
+                        <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Ruby on Rails</span>
+                        </label>
+
+                        <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Python</span>
+                        </label>
+
+                        <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Node.js</span>
+                        </label>
+                      </div>
+
+                      <hr class="m-b-2">
+                      <h5 class="m-b-2">Payment Information:</h5>
+                        <div class="row">
+                          <div class="col-lg-6 form-group has-success">
+                            <label for="cc-num" class="form-control-label p-l-0">Card Number:</label>
+                            <input class="form-control form-control-success" id="cc-num" type="text">
+                          </div>
+
+                          <div class="col-lg-3 form-group">
+                            <label for="zip">Zip Code:</label>
+                            <input class="form-control" id="zip" type="text">
+                          </div>
+
+                          <div class="col-lg-3 form-group">
+                            <label for="cvv">CVV:</label>
+                            <input class="form-control" id="cvv" type="text">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                        <label class="col-lg-12">Expiration Date:</label>
+                          <div class="col-lg-8 form-group">
+                            <select class="c-select form-control" id="exp-month">
+                              <option value="1">1 - January</option>
+                              <option value="2">2 - February</option>
+                              <option value="3">3 - March</option>
+                              <option value="4">4 - April</option>
+                              <option value="5">5 - May</option>
+                              <option value="6">6 - June</option>
+                              <option value="7">7 - July</option>
+                              <option value="8">8 - August</option>
+                              <option value="9">9 - September</option>
+                              <option value="10">10 - October</option>
+                              <option value="11">11 - November</option> 
+                              <option value="12">12 - December</option>                           
+                            </select> 
+
+                          </div>
+
+                          <div class="col-lg-4 form-group">
+                            <select class="c-select form-control" id="exp-year">
+                              <option value="2016">2016</option>
+                              <option value="2017">2017</option>
+                              <option value="2018">2018</option>
+                              <option value="2019">2019</option>
+                              <option value="2020">2020</option>                          
+                            </select>
+                          </div>
+                        </div>
+
+                        <hr class="m-b-2">
+                        <div class="text-xs-center">
+                            <div class="container">
+                              <button type="submit" class="btn btn-primary btn-lg">Register Now!</button>
+                            </div>
+                        </div>
+
+                    </form>
+                  <!-- /Registration form -->
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+        <!-- /modal -->
 		
     <!-- jQuery first, then bootstrap js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
